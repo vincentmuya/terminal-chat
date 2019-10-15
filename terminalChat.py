@@ -3,7 +3,7 @@ import pysher
 import os
 import json
 import getpass
-from temcolor import colored
+from termcolor import colored
 from dotenv import load_dotenv
 
 
@@ -69,7 +69,7 @@ class terminalChat():
         message = input(colored("{}:".format(self.user), "green"))
         self.pusher.trigger(self.chatroom, u'newmessage', {"user": self.user, "message": message})
 
-'''
+    '''
     This function initializes both the Http server Pusher as well as the clientPusher
     '''
     def initPusher(self):
