@@ -16,8 +16,8 @@ class terminalChat():
     clientPusher = None
     user = None
     users = {
-        "samuel": "samuel'spassword",
-        "daniel": "daniel'spassword",
+        "test": "test",
+        "test2": "test2",
         "tobi": "tobi'spassword",
         "sarah": "sarah'spassword"
 
