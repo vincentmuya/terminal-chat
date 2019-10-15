@@ -32,3 +32,19 @@ class terminalChat():
         self.selectChatroom()
         while True:
             self.getInput()
+
+    '''
+    This function handles loginto the system. In a real world app, you might need ti connect ti API's or database to verify users
+    '''
+    def login(self):
+        username = input("Please enter your username:")
+        password = getpass.getpass("Please enter %s's Password" % username)
+        if username in self.users:
+            if self.users[username] == password:
+                self.user = username
+            else:
+                print(colored("Your password is incorrect", "red"))
+                self.login()
+        else:
+            print(colored("Your username is incorrect", "red"))
+            self.login()
