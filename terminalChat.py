@@ -23,3 +23,12 @@ class terminalChat():
 
     }
     chatrooms =["sports", "general", "education", "health", "technology"]
+
+    '''
+    The entry point of the application
+    '''
+    def main(self):
+        self.login()
+        self.selectChatroom()
+        while True:
+            self.getInput()
