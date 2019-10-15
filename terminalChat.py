@@ -49,7 +49,7 @@ class terminalChat():
             print(colored("Your username is incorrect", "red"))
             self.login()
 
-'''
+    '''
     This function is used to select which chatroom you would like to connect to ...
     '''
     def selectChatroom(self):
@@ -61,3 +61,10 @@ class terminalChat():
         else:
             print(colored("No such chatroom in our list", "red"))
             self.selectChatroom()
+
+    '''
+    This function is used to get the user's current message
+    '''
+    def getInput(self):
+        message = input(colored("{}:".format(self.user), "green"))
+        self.pusher.trigger(self.chatroom, u'newmessage', {"user": self.user, "message": message})
