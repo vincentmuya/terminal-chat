@@ -75,7 +75,7 @@ class terminalChat():
     def initPusher(self):
         self.pusher = Pusher(app_id=os.getenv('PUSHER_APP_ID', None), key=os.getenv('PUSHER_APP_KEY', None), secret=os.getenv('PUSHER_APP_SECRET', None), cluster=os.getenv('PUSHER_APP_CLUSTER', None))
         self.clientPusher = pysher.Pusher(os.getenv('PUSHER_APP_KEY', None), os.getenv('PUSHER_APP_CLUSTER', None))
-        self.clientPusher.connection.bind('pusher:connection_established', self.connectHander)
+        self.clientPusher.connection.bind('pusher:connection_established', self.connectHandler)
         self.clientPusher.connect()
 
     '''
