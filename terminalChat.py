@@ -48,3 +48,16 @@ class terminalChat():
         else:
             print(colored("Your username is incorrect", "red"))
             self.login()
+
+'''
+    This function is used to select which chatroom you would like to connect to ...
+    '''
+    def selectChatroom(self):
+        print(colored("Info! Available chatrooms are %s" % str(self.chatrooms), "blue"))
+        chatroom = input(colored("Plese select a chatroom : ", "green"))
+        if chatroom in self.chatrooms:
+            self.chatroom = chatroom
+            self.initPusher()
+        else:
+            print(colored("No such chatroom in our list", "red"))
+            self.selectChatroom()
