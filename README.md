@@ -1,4 +1,4 @@
-# Ecomart
+# Terminal chat
 
 #### A terminal chat platform
 
@@ -7,6 +7,13 @@
 ## Description
 
 A platform that users can chat in different chat rooms
+
+## Setup/Installation Requirements
+
+* Clone the repo
+* Install python3.6 if not installed
+* Open project directory in terminal
+* Run python3.6 terminalChat.py
 
 ## Known Bugs
 
